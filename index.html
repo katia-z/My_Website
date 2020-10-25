@@ -30,9 +30,9 @@
       </div>
 
       <div class="profile">
-        <article class="profile__left-side">
-          <h3>About me</h3>
-          <p>Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. Has ipsum
+        <article class="profile-text">
+          <h3 class="profile-text__title">About me</h3>
+          <p class="profile-text__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. Has ipsum
           aliquid an, ad possim eloquentiam eam. Dolorum propriae salutandi at per. Has te volumus accumsan, consul menandri quo
           et. No epicuri adolescens theophrastus sit.
           <br />
@@ -40,19 +40,19 @@
           In mea vero probatus inciderint, patrioque disputationi in eum. Ei pri zril fuisset. Te quo legere sententiae
           theophrastus, eam an movet tincidunt.</p>
         </article>
-        <article class="profile__right-side">
-          <h3>Skills</h3>
-          <div class="profile__skills">
-            <ul class="profile__skills-left">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Node.js</li>
+        <article class="profile-skills">
+          <h3 class="profile-skills__title">Skills</h3>
+          <div class="profile-skills__list">
+            <ul class="profile-skills__list-left">
+              <li class="profile-skills__item">HTML</li>
+              <li class="profile-skills__item">CSS</li>
+              <li class="profile-skills__item">JavaScript</li>
+              <li class="profile-skills__item">Node.js</li>
             </ul>
-            <ul class="profile__skills-right">
-              <li>React.js</li>
-              <li>Express.js</li>
-              <li>Git</li>
+            <ul class="profile-skills__list-right">
+              <li class="profile-skills__item">React.js</li>
+              <li class="profile-skills__item">Express.js</li>
+              <li class="profile-skills__item">Git</li>
             </ul>
           </div>
       </div>
@@ -68,77 +68,91 @@
         <div class="projects">
 
           <article class="projects__block">
-            <div class="projects__frontRectangle">
-              <img src="./resources/image 1.png">
+            
+              <img class="projects__image" src="./resources/image 1.png">
               <div class="projects__description">
-                <h4>Jammming</h4>
-                <p>Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. </p>
-                <button>Demo</button>
-                <button>GitHub</button>
+                <h4 class="projects__title">Jammming</h4>
+                <p class="projects__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu
+                  salutandi definitionem. </p>
+                <div class="projects__buttons-container">
+                  <button class="projects__button">Demo</button>
+                  <button class="projects__button">GitHub</button>
+                </div>
               </div>
-            </div>
-            <div class="projects__backRectangle"></div>
+
           </article>
 
           <article class="projects__block">
-            <div class="projects__frontRectangle">
-              <img src="./resources/image 1.png">
+
+              <img class="projects__image" src="./resources/image 1.png">
               <div class="projects__description">
-                <h4>Ravenous</h4>
-                <p>Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. </p>
-                <button>Demo</button>
-                <button>GitHub</button>
+                <h4 class="projects__title">Ravenous</h4>
+                <p class="projects__paragraph" >Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. </p>
+                <div class="projects__buttons-container">
+                  <button class="projects__button">Demo</button>
+                  <button class="projects__button">GitHub</button>
+                </div>
               </div>
-            </div>
-            <div class="projects__backRectangle"></div>
-      
-          </article>
-          <article class="projects__block">
-            <div class="projects__frontRectangle">
-              <img src="./resources/image 1.png">
-              <div class="projects__description">
-                <h4>Anabela's Little Bakery</h4>
-                <p>Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. </p>
-                <button>Demo</button>
-                <button>GitHub</button>
-              </div>
-            </div>
-            <div class="projects__backRectangle"></div>
+
           </article>
 
           <article class="projects__block">
-            <div class="projects__frontRectangle">
-              <img src="./resources/image 1.png">
-              <div class="projects__description">
-                <h4>Calculator</h4>
-                <p>Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. </p>
-                <button>Demo</button>
-                <button>GitHub</button>
-              </div>
+
+          <img class="projects__image" src="./resources/image 1.png">
+          <div class="projects__description">
+            <h4 class="projects__title">Anabela's Little Bakery</h4>
+            <p class="projects__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu
+              salutandi definitionem. </p>
+            <div class="projects__buttons-container">
+              <button class="projects__button">Demo</button>
+              <button class="projects__button">GitHub</button>
             </div>
-            <div class="projects__backRectangle"></div>
+          </div>
+
+          </article>
+
+          <article class="projects__block">
+
+          <img class="projects__image" src="./resources/image 1.png">
+          <div class="projects__description">
+            <h4 class="projects__title">Calculator</h4>
+            <p class="projects__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu
+              salutandi definitionem. </p>
+              <div class="projects__buttons-container">
+                <button class="projects__button">Demo</button>
+                <button class="projects__button">GitHub</button>
+              </div>
+          </div>
+
             </article>
+
+            
 
         </div>
 
     </section>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact_section">
       <div class="section-title">
         <h2>Contact</h2>
         <hr class="underline">
       </div>
-      <article>
-        <p>In mea vero probatus inciderint, patrioque disputationi in eum. Ei pri zril fuisset. Te quo legere sententiae
-        theophrastus, eam an movet tincidunt.</p>
-        <ul>
-          <li><img src="./resources/Email.png"></li>
-          <li><img src="./resources/LinkedIn.png"></li>
-          <li><img src="./resources/GitHub.png"></li>
+
+      <div class="contact">
+        <p class="contact__paragraph">In mea vero probatus inciderint, patrioque disputationi in eum. Ei pri<br />zril fuisset. Te quo legere sententiae
+        theophrastus, eam an movet<br />tincidunt.</p>
+        <ul class="contact__icons">
+          <li class="contact__item"><a class="contact__link" href="#"><img class="contact__image" src="./resources/Email.png"></a></li>
+          <li class="contact__item"><a class="contact__link" href="#"><img class="contact__image" src="./resources/GitHub.png"></a></li>
+          <li class="contact__item"><a class="contact__link" href="#"><img class="contact__image" src="./resources/LinkedIn.png"></a></li>
         </ul>
-      </article>
+      </div>
     </section>
+    <button class="test">
+      <a href="#"><img class="test__image" src="./resources/seta.png"></a>
+    </button>
+
   </main>
-  <footer>
+  <footer class="footer">
   Developed by Katia Zakharkevich
   </footer>
 </body>

@@ -70,13 +70,6 @@ p {
   color: rgb(226, 226, 226);
 }
 
-li::before {
-  content: "•";
-  color: rgba(226, 108, 0, 1);
-  display: inline-block;
-  width: 1rem;
-  margin-left: -1rem;
-}
 .nav__flex-container {
   width: 100%;
   height: 100px;
@@ -113,7 +106,7 @@ li::before {
 
 .profile_section {
   margin-bottom: 28rem;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 .profile {
   display: flex;
@@ -122,26 +115,27 @@ li::before {
   max-width: 100%;
 }
 
-.profile__left-side {
+.profile-text {
   display: inline-block;
   width: 33.5rem;
   margin-right: 10rem;
 }
-.profile__left-side p {
+.profile-text__paragraph {
   font-size: 1.5rem;
 }
-.profile__left-side h3,
-.profile__right-side h3 {
+.profile-text__title,
+.profile-skills__title {
   margin-bottom: 3.75rem;
 }
-.profile__right-side h3 {
+.profile-skills__title {
   margin-left: -1rem;
 }
-.profile__right-side {
+.profile-skills {
   display: inline-block;
   margin-left: 10rem;
 }
-.profile__skills {
+
+.profile-skills__list {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -149,12 +143,19 @@ li::before {
   font-size: 1.625rem;
   width: 25rem;
 }
+.profile-skills__item::before {
+  content: "•";
+  color: rgba(226, 108, 0, 1);
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
 
-.profile__skills-left {
+.profile-skills__list-left {
   margin: 0 5rem auto auto;
   padding-right: 130px;
 }
-.profile__skills-right {
+.profile-skills__list-right {
   margin: 0 auto;
   margin-left: 5rem;
   padding-right: 100px;
@@ -164,11 +165,11 @@ li::before {
 
 .projects_section {
   margin-bottom: 28rem;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 .projects {
   box-sizing: border-box;
-  background-color: teal;
+  /*background-color: teal;*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -182,32 +183,119 @@ li::before {
   margin-right: 1.25rem;
   margin-bottom: 0;
 }
-.projects__frontRectangle {
+
+.projects__block {
   position: relative;
   background-color: rgba(24, 24, 24, 1);
   border: 1px solid rgba(226, 108, 0, 1);
   border-radius: 10px;
-  width: 37.5rem;
-  height: 21.25rem;
-  z-index: 10;
+  width: 40rem; /*600*/
+  height: 21.4rem; /*340*/
+  padding: 20px 20px;
+  margin-bottom: 7.5rem;
+  display: flex;
 }
 
-.projects__frontRectangle img {
-  height: 200px;
-  width: 240px;
-}
-
-.projects__backRectangle {
-  position: relative;
-  bottom: 20rem;
-  left: 1.25rem;
-  background-color: rgba(24, 24, 24, 1);
-  border: 1px solid rgba(226, 0, 122, 1);
+.projects__block:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: rgba(24, 24, 24, 1);
   border-radius: 10px;
-  width: 37.5rem;
-  height: 21.25rem;
-  z-index: 1;
-  margin-top: 0;
+  border: 1px solid rgba(226, 0, 122, 1);
+  left: 20px;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.projects__image {
+  height: 240px;
+  width: 280px;
+  margin-top: 32px;
+}
+.projects__description {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects__title {
+  font-size: 2rem;
+}
+.projects__paragraph {
+  font-size: 1.4rem;
+  margin: 15px auto;
+}
+.projects__buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100%;
+}
+.projects__button {
+  background-color: rgba(24, 24, 24, 1);
+  color: white;
+  border: 1px solid rgba(226, 108, 0, 1);
+  border-radius: 25px;
+  font-size: 1.5rem;
+  padding: 8px 30px;
 }
 
 /* CONTACT SECTION */
+
+.contact_section {
+  margin-bottom: 18.75rem;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__paragraph {
+  font-size: 1.625rem;
+  margin-bottom: 6.25rem;
+  text-align: center;
+}
+.contact__icons {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 29.375rem;
+}
+.contact__item {
+}
+.contact__link {
+}
+.contact__image {
+  width: 5.625rem;
+  height: 5.625rem;
+}
+.footer {
+  font-size: 1.25rem;
+  color: rgba(226, 0, 122, 1);
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+.test {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.test__image {
+  width: 3rem;
+  height: 3rem;
+  color: transparent;
+}
+button {
+  display: inline-block;
+  border: none;
+
+  text-decoration: none;
+  background: transparent;
+
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}

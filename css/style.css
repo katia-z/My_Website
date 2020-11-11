@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 100%;
 }
 body {
   background-color: rgba(24, 24, 24, 1);
@@ -35,6 +35,10 @@ body {
   outline: none;
   text-decoration: none;
   width: 9rem;
+}
+.nav__button:hover {
+  color: rgba(226, 108, 0, 1);
+  transition: color 250ms ease-in-out, transform 150ms ease;
 }
 
 /* MAIN */
@@ -149,14 +153,8 @@ body {
   gap: 0.625rem;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
+  /*max-width: 100%;*/
 }
-.projects__block {
-  position: relative;
-  margin-right: 1.25rem;
-  margin-bottom: 0;
-}
-
 .projects__block {
   position: relative;
   background-color: rgba(24, 24, 24, 1);
@@ -165,6 +163,7 @@ body {
   width: 40rem; /*600*/
   height: 21.4rem; /*340*/
   padding: 1.25rem;
+  margin-right: 1.25rem;
   margin-bottom: 7.5rem;
   display: flex;
 }
@@ -209,13 +208,25 @@ body {
   margin-top: 1.875rem;
   width: 100%;
 }
+.projects__item {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: transparent;
+}
 .projects__button {
   background-color: rgba(24, 24, 24, 1);
   color: white;
   border: 1px solid rgba(226, 108, 0, 1);
   border-radius: 1.563rem;
   font-size: 1.5rem;
-  padding: 0.5rem 1.875rem;
+  padding: 0.25rem 1.875rem;
+  outline: none;
+  text-decoration: none;
+}
+.projects__button:hover {
+  color: rgba(226, 108, 0, 1);
+  transition: color 250ms ease-in-out;
 }
 
 /* CONTACT SECTION */
@@ -240,13 +251,17 @@ body {
   justify-content: space-between;
   width: 29.375rem;
 }
-.contact__item {
-}
 .contact__link {
+  width: 5.625rem;
+  height: 5.625rem;
 }
 .contact__image {
   width: 5.625rem;
   height: 5.625rem;
+  scale: 1;
+}
+.contact__image:hover {
+  transform: scale(1.1);
 }
 
 /* SCROLL BACK TO TOP BUTTON */
@@ -255,17 +270,21 @@ body {
   position: fixed;
   bottom: 1.25rem;
   right: 1.25rem;
-  display: inline-block;
+  display: flex;
   border: none;
 
   text-decoration: none;
   background: transparent;
+}
+.scrollBackButton__link {
+  width: 4rem;
+  height: 4rem;
 
-  transition: background 250ms ease-in-out, transform 150ms ease;
+  padding: 1rem;
 }
 .scrollBackButton__image {
-  width: 1rem;
-  height: 2rem;
+  width: 1.25rem;
+  height: 2.5rem;
   color: transparent;
 }
 
@@ -280,161 +299,479 @@ body {
 
 /* MEDIA QUERIES*/
 
+@media (any-hover: none) {
+  .nav__button:hover {
+    color: rgba(226, 0, 122, 1);
+  }
+  .projects__button:hover {
+    color: white;
+  }
+  .contact__image:hover {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 2040px) {
   html {
-    font-size: 15px;
+    font-size: 93.75%;
   }
 }
 
 @media (max-width: 1920px) {
   html {
-    font-size: 14px;
+    font-size: 87.5%;
   }
 }
 @media (max-width: 1780px) {
   html {
-    font-size: 13px;
+    font-size: 81.25%;
   }
-
   @media (max-width: 1670px) {
     html {
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width: 1530px) {
-    html {
-      font-size: 11px;
+      font-size: 81.25%;
     }
     .nav__flex-container {
       height: 7rem;
     }
     .nav__button {
-      font-size: 2.25rem;
-      padding: 1.75rem;
-      width: 11rem;
-    }
-  }
-
-  @media (max-width: 1400px) {
-    html {
-      font-size: 10px;
-    }
-    .nav__flex-container {
-      height: 8rem;
-    }
-    .nav__button {
-      font-size: 2.5rem;
       padding: 2rem;
       width: 11rem;
     }
+  }
+  @media (max-width: 1660px) {
+    html {
+      font-size: 81.25%;
+    }
     .main-content {
-      margin: auto 21rem;
-    }
-    .main-content__title {
-      font-size: 4rem;
-    }
-    .profile-text {
-      margin-right: 8rem;
-      width: 36.5rem;
-    }
-    .profile-text__paragraph {
-      font-size: 2rem;
-    }
-    .profile-skills {
-      margin-left: 8rem;
-    }
-    .profile-skills__list {
-      font-size: 2rem;
-      width: 28rem;
+      margin: auto 19rem;
     }
   }
-  @media (max-width: 1270px) {
-    html {
-      font-size: 9px;
+  @media (max-width: 1630px) {
+    .main-content {
+      margin: auto 18rem;
     }
   }
-
-  /* --TABLET-- */
-
-  @media (max-width: 768px) {
-    html {
-      font-size: 16px;
-      width: 768px;
-    }
-    /* HEADER */
-    .nav__flex-container {
-      height: 6rem;
-      width: 768px;
-      justify-content: space-evenly;
-    }
-    .nav__button {
-      font-size: 2rem;
-      padding: 2rem;
-      width: 11rem;
-    }
-    /* MAIN */
+  @media (max-width: 1590px) {
     .main-content {
-      margin: auto 3rem;
-      width: 768px;
+      margin: auto 17rem;
     }
-    .main-content__title {
-      font-size: 3rem;
-      margin: 25rem auto 25rem auto;
+  }
+  @media (max-width: 1560px) {
+    .main-content {
+      margin: auto 16rem;
     }
+  }
+}
+@media (max-width: 1530px) {
+  html {
+    font-size: 75%;
+  }
+  .nav__flex-container {
+    height: 7rem;
+  }
+  .nav__button {
+    font-size: 2.25rem;
+    padding: 1.75rem;
+    width: 11rem;
+  }
+  .main-content {
+    margin: auto 19rem;
+  }
+}
+@media (max-width: 1500px) {
+  .main-content {
+    margin: auto 18rem;
+  }
+}
+@media (max-width: 1460px) {
+  html {
+    font-size: 68.75%;
+  }
+  .nav__flex-container {
+    height: 8rem;
+  }
+  .nav__button {
+    font-size: 2.5rem;
+    padding: 2rem;
+    width: 11rem;
+  }
+  .main-content {
+    margin: auto 21rem;
+  }
+  .main-content__title {
+    font-size: 4rem;
+  }
+  .profile-text {
+    margin-right: 8rem;
+    width: 36.5rem;
+  }
+  .profile-text__paragraph {
+    font-size: 2rem;
+  }
+  .profile-skills {
+    margin-left: 8rem;
+  }
+  .profile-skills__list {
+    font-size: 2rem;
+    width: 28rem;
+  }
+}
+@media (max-width: 1430px) {
+  .main-content {
+    margin: auto 17rem;
+  }
+}
+@media (max-width: 1330px) {
+  .main-content {
+    margin: auto 16rem;
+  }
+}
+@media (max-width: 1290px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 1200px) {
+  .main-content {
+    margin: auto 15rem;
+  }
+}
+@media (max-width: 1170px) {
+  html {
+    font-size: 81.25%;
+  }
+  /* HEADER */
+  .nav__flex-container {
+    height: 6rem;
+  }
+  .nav__button {
+    font-size: 2rem;
+    padding: 2rem;
+    width: 11rem;
+  }
+  /* MAIN */
+  .main-content {
+    margin: auto 17rem;
+  }
+  .section-title {
+    margin-bottom: 6rem;
+  }
+  .section-title__title {
+    font-size: 2.5rem;
+  }
+  /* PROFILE SECTION */
+  .profile_section {
+    margin-bottom: 10rem;
+  }
+  .profile {
+    flex-direction: column;
+    margin: 5rem auto 5rem auto;
+  }
+  .profile-text {
+    width: 50rem;
+    margin-right: 0;
+  }
+  .profile-text__paragraph {
+    font-size: 1.5rem;
+  }
+  .profile__title {
+    font-size: 2rem;
+  }
+  .profile-skills {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 3.75rem;
+    margin-top: 5rem;
+  }
+  .profile__title--marginleft {
+    margin-left: 0;
+  }
+  .profile-skills__list {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  /* PROJECTS SECTION */
+  .projects {
+    justify-content: center;
+  }
+  .projects_section {
+    margin-bottom: 10rem;
+  }
+  .projects__block {
+    width: 45rem;
+    height: 24.075rem;
+    padding: 1.4rem;
+  }
+  .projects__image {
+    height: 16.875rem;
+    width: 19.35rem;
+    margin-top: 2.25rem;
+  }
+  .projects__description {
+    margin-left: 2.1rem;
+  }
+  .projects__title {
+    font-size: 2.25rem;
+  }
+  .projects__paragraph {
+    font-size: 1.557rem;
+    margin: 1.112rem auto;
+  }
+  .projects__buttons-container {
+    margin-top: 2.08rem;
+  }
+  .projects__button {
+    border-radius: 1.95rem;
+    font-size: 1.738rem;
+    padding: 0.556rem 2.086rem;
+  }
+  /* CONTACT SECTION */
+  .contact_section {
+    margin-bottom: 10rem;
+  }
+  .contact__paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 6.955rem;
+  }
+}
+@media (max-width: 1050px) {
+  html {
+    font-size: 81.25%;
+  }
+  .main-content {
+    margin: auto 10rem;
+  }
+  .main-content__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 890px) {
+  html {
+    font-size: 81.25%;
+  }
+  .main-content {
+    margin: auto 8rem;
+  }
+}
+@media (max-width: 810px) {
+  html {
+    font-size: 81.25%;
+  }
+  .main-content {
+    margin: auto 6rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+  /* HEADER */
+  .nav__flex-container {
+    height: 6rem;
+    /*width: 768px;*/
+    justify-content: space-evenly;
+  }
+  .nav__button {
+    font-size: 2rem;
+    padding: 2rem;
+    width: 11rem;
+  }
+  .nav__button:active {
+    color: royalblue;
+  }
+  /* MAIN */
+  .main-content {
+    margin: auto 4rem;
+    /*width: 768px;*/
+  }
+  .main-content__title {
+    font-size: 3rem;
+    margin: 25rem auto 25rem auto;
+  }
 
-    .section-title {
-      margin-bottom: 5rem;
-    }
-    .section-title__title {
-      font-size: 2.5rem;
-    }
-    .section-title__underline {
-      width: 35rem;
-    }
+  .section-title {
+    margin-bottom: 5rem;
+  }
+  .section-title__title {
+    font-size: 2.5rem;
+  }
+  .section-title__underline {
+    width: 35rem;
+  }
 
-    /* PROFILE SECTION */
-    .profile_section {
-      margin-bottom: 7rem;
-    }
-    .profile {
-      flex-direction: column;
-      margin: 5rem auto 5rem auto;
-    }
-    .profile-text__paragraph {
-      font-size: 1.5rem;
-    }
-    .profile-skills {
-      display: inline-block;
-      margin-left: 0;
-      margin-bottom: 3.75rem;
-      margin-top: 3.75rem;
-      margin: ;
-    }
-    .profile__title--marginleft {
-      margin-left: 0;
-    }
-    .profile-skills__list {
-      padding-left: 1rem;
-      font-size: 1.5rem;
-    }
-    /* PROJECTS SECTION */
-    .projects_section {
-      margin-bottom: 7rem;
-    }
-    /* CONTACT SECTION */
-    .contact_section {
-      margin-bottom: 10rem;
-    }
-    .contact {
-      padding-right: 3rem;
-    }
-    .contact__paragraph {
-      margin-bottom: 8rem;
-    }
-    /* FOOTER */
-    .footer {
-      padding-left: 4rem;
-    }
+  /* PROFILE SECTION */
+  .profile_section {
+    margin-bottom: 7rem;
+  }
+  .profile {
+    flex-direction: column;
+    margin: 5rem auto 5rem auto;
+  }
+  .profile-text {
+    width: 100%;
+  }
+  .profile-text__paragraph {
+    font-size: 1.5rem;
+  }
+  .profile-skills {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 3.75rem;
+    margin-top: 3.75rem;
+  }
+  .profile__title--marginleft {
+    margin-left: 0;
+  }
+  .profile-skills__list {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+  /* PROJECTS SECTION */
+  .projects_section {
+    margin-bottom: 7rem;
+  }
+  .projects {
+    justify-content: center;
+    gap: 0;
+  }
+  .projects__block {
+    width: 40rem;
+    height: 21.4rem;
+    padding: 1.4rem;
+    margin-left: 0;
+  }
+  .projects__image {
+    height: 15rem;
+    width: 17.5rem;
+    margin-top: 2rem;
+  }
+  .projects__description {
+    margin-left: 1.875rem;
+  }
+  .projects__title {
+    font-size: 2rem;
+  }
+  .projects__paragraph {
+    font-size: 1.4rem;
+    margin: 1rem auto;
+  }
+  .projects__buttons-container {
+    margin-top: 1.875rem;
+  }
+  .projects__button {
+    border-radius: 1.563rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.875rem;
+  }
+  /* CONTACT SECTION */
+  .contact_section {
+    margin-bottom: 10rem;
+  }
+
+  .contact__paragraph {
+    margin-bottom: 8rem;
+    font-size: 1.625rem;
+  }
+  .scrollBackButton {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+/* --MOBILE--  CORRECT IT */
+
+@media (max-width: 400px) {
+  html {
+    font-size: 100%;
+    width: 100%;
+  }
+  /* HEADER */
+  .nav__flex-container {
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .nav__button {
+    font-size: 2.5rem;
+    padding: 1.25rem;
+    width: auto;
+  }
+  /* MAIN */
+  .main-content {
+    margin: auto 2rem;
+  }
+  .main-content__title {
+    font-size: 3rem;
+    margin: 25rem auto 30rem auto;
+    width: 28rem;
+  }
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+  .section-title__underline {
+    width: 28rem;
+  }
+  /* PROFILE SECTION */
+  .profile {
+    margin-top: 1.5rem;
+  }
+  .profile-text {
+    width: 28rem;
+  }
+  .profile-text__paragraph {
+    font-size: 1.75rem;
+  }
+  .profile-skills__list {
+    font-size: 1.75rem;
+  }
+  /* PROJECTS SECTION */
+  .projects {
+    width: 29rem;
+    margin-top: 2rem;
+  }
+  .projects__block {
+    flex-direction: column;
+    align-items: center;
+    height: 42rem;
+    width: 21.4rem;
+    padding: 1.4rem;
+  }
+  .projects__image {
+    margin-top: 1rem;
+  }
+  .projects__description {
+    margin: auto 0;
+    justify-content: space-between;
+    height: 20rem;
+  }
+  /* CONTACT SECTION */
+
+  .contact_section {
+    margin-bottom: 8rem;
+  }
+  .contact {
+    width: 28rem;
+  }
+  .contact__paragraph {
+    margin-bottom: 6.25rem;
+  }
+  .contact__icons {
+    justify-content: space-around;
+    width: 29.375rem;
+  }
+  .contact__link {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .contact__image {
+    width: 5rem;
+    height: 5rem;
+  }
+  /* FOOTER */
+  .scrollBackButton {
+    bottom: 1rem;
+    right: 0;
+  }
+  .footer {
+    width: 32rem;
   }
 }

@@ -21,7 +21,7 @@ html {
 }
 body {
   background-color: rgba(24, 24, 24, 1);
-  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 /* HEADER */
@@ -62,7 +62,8 @@ body {
 /* MAIN */
 
 .main-content {
-  margin: auto 21rem;
+  width: 94rem;
+  margin: 0 auto;
   color: rgb(226, 226, 226);
 }
 .main-content__title {
@@ -167,14 +168,12 @@ body {
 }
 .projects {
   box-sizing: border-box;
-  /*background-color: teal;*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.625rem;
   justify-content: space-between;
   align-items: center;
-  /*max-width: 100%;*/
 }
 .projects__block {
   position: relative;
@@ -184,7 +183,7 @@ body {
   width: 40rem; /*600*/
   height: 21.4rem; /*340*/
   padding: 1.25rem;
-  margin-right: 1.25rem;
+  /*margin-right: 1.25rem;*/
   margin-bottom: 7.5rem;
   display: flex;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
@@ -267,6 +266,7 @@ body {
   font-size: 1.625rem;
   margin-bottom: 6.25rem;
   text-align: center;
+  width: 45rem;
 }
 .contact__icons {
   display: flex;
@@ -350,42 +350,28 @@ body {
   html {
     font-size: 81.25%;
   }
-  @media (max-width: 1670px) {
-    html {
-      font-size: 81.25%;
-    }
-    .nav__flex-container {
-      height: 7rem;
-    }
-    .nav__button {
-      padding: 2rem;
-      width: 11rem;
-    }
-  }
-  @media (max-width: 1660px) {
-    html {
-      font-size: 81.25%;
-    }
-    .main-content {
-      margin: auto 19rem;
-    }
-  }
-  @media (max-width: 1630px) {
-    .main-content {
-      margin: auto 18rem;
-    }
-  }
-  @media (max-width: 1590px) {
-    .main-content {
-      margin: auto 17rem;
-    }
-  }
-  @media (max-width: 1560px) {
-    .main-content {
-      margin: auto 16rem;
-    }
+  .contact_section {
+    margin-bottom: 13rem;
   }
 }
+@media (max-width: 1670px) {
+  html {
+    font-size: 81.25%;
+  }
+  .nav__flex-container {
+    height: 7rem;
+  }
+  .nav__button {
+    padding: 2rem;
+    width: 11rem;
+  }
+}
+@media (max-width: 1560px) {
+  .main-content {
+    width: 90rem;
+  }
+}
+
 @media (max-width: 1530px) {
   html {
     font-size: 75%;
@@ -398,29 +384,20 @@ body {
     padding: 1.75rem;
     width: 11rem;
   }
-  .main-content {
-    margin: auto 19rem;
-  }
-}
-@media (max-width: 1500px) {
-  .main-content {
-    margin: auto 18rem;
-  }
 }
 @media (max-width: 1460px) {
   html {
-    font-size: 68.75%;
+    font-size: 75%;
   }
   .nav__flex-container {
     height: 8rem;
   }
   .nav__button {
-    font-size: 2.5rem;
     padding: 2rem;
     width: 11rem;
   }
   .main-content {
-    margin: auto 21rem;
+    width: 95rem;
   }
   .main-content__title {
     font-size: 4rem;
@@ -430,39 +407,35 @@ body {
     width: 36.5rem;
   }
   .profile-text__paragraph {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .profile-skills {
     margin-left: 8rem;
   }
   .profile-skills__list {
-    font-size: 2rem;
+    font-size: 1.75rem;
     width: 28rem;
   }
 }
-@media (max-width: 1430px) {
+@media (max-width: 1460px) {
   .main-content {
-    margin: auto 17rem;
+    width: 90rem;
   }
 }
-@media (max-width: 1330px) {
-  .main-content {
-    margin: auto 16rem;
-  }
-}
-@media (max-width: 1290px) {
+@media (max-width: 1390px) {
   html {
-    font-size: 62.5%;
+    font-size: 68.75%;
   }
-}
-@media (max-width: 1200px) {
-  .main-content {
-    margin: auto 15rem;
+  .section-title {
+    margin-bottom: 6rem;
+  }
+  .profile {
+    margin-top: 6rem;
   }
 }
 @media (max-width: 1170px) {
   html {
-    font-size: 81.25%;
+    font-size: 75%;
   }
   /* HEADER */
   .nav__flex-container {
@@ -475,7 +448,7 @@ body {
   }
   /* MAIN */
   .main-content {
-    margin: auto 17rem;
+    width: 80rem;
   }
   .section-title {
     margin-bottom: 6rem;
@@ -488,11 +461,11 @@ body {
     margin-bottom: 10rem;
   }
   .profile {
-    flex-direction: column;
+    /*flex-direction: column;*/
     margin: 5rem auto 5rem auto;
   }
   .profile-text {
-    width: 50rem;
+    width: 35rem;
     margin-right: 0;
   }
   .profile-text__paragraph {
@@ -505,7 +478,7 @@ body {
     display: inline-block;
     margin-left: 0;
     margin-bottom: 3.75rem;
-    margin-top: 5rem;
+    margin-top: 0;
   }
   .profile__title--marginleft {
     margin-left: 0;
@@ -563,66 +536,11 @@ body {
     font-size: 81.25%;
   }
   .main-content {
-    margin: auto 10rem;
+    width: 60rem;
   }
   .main-content__title {
     font-size: 3rem;
   }
-}
-@media (max-width: 890px) {
-  html {
-    font-size: 81.25%;
-  }
-  .main-content {
-    margin: auto 8rem;
-  }
-}
-@media (max-width: 810px) {
-  html {
-    font-size: 81.25%;
-  }
-  .main-content {
-    margin: auto 6rem;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 87.5%;
-  }
-  /* HEADER */
-  .nav__flex-container {
-    height: 6rem;
-    /*width: 768px;*/
-    justify-content: space-evenly;
-  }
-  .nav__button {
-    font-size: 2rem;
-    padding: 2rem;
-    width: 11rem;
-  }
-  .nav__button:active {
-    color: royalblue;
-  }
-  /* MAIN */
-  .main-content {
-    margin: auto 4rem;
-    /*width: 768px;*/
-  }
-  .main-content__title {
-    font-size: 3rem;
-    margin: 25rem auto 25rem auto;
-  }
-
-  .section-title {
-    margin-bottom: 5rem;
-  }
-  .section-title__title {
-    font-size: 2.5rem;
-  }
-  .section-title__underline {
-    width: 35rem;
-  }
-
   /* PROFILE SECTION */
   .profile_section {
     margin-bottom: 7rem;
@@ -650,6 +568,56 @@ body {
     padding-left: 1rem;
     font-size: 1.5rem;
   }
+}
+@media (max-width: 890px) {
+  html {
+    font-size: 81.25%;
+  }
+  .main-content {
+    width: 50rem;
+  }
+}
+@media (max-width: 810px) {
+  html {
+    font-size: 81.25%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+  /* HEADER */
+  .nav__flex-container {
+    height: 6rem;
+    justify-content: space-evenly;
+  }
+  .nav__button {
+    font-size: 1.75rem;
+    padding: 2rem;
+    width: 11rem;
+  }
+  .nav__button:active {
+    color: royalblue;
+  }
+  /* MAIN */
+  .main-content {
+    width: 41rem;
+  }
+  .main-content__title {
+    font-size: 3rem;
+    margin: 25rem auto 25rem auto;
+  }
+
+  .section-title {
+    margin-bottom: 5rem;
+  }
+  .section-title__title {
+    font-size: 2.5rem;
+  }
+  .section-title__underline {
+    width: 35rem;
+  }
+
   /* PROJECTS SECTION */
   .projects_section {
     margin-bottom: 7rem;
@@ -695,6 +663,7 @@ body {
   .contact__paragraph {
     margin-bottom: 8rem;
     font-size: 1.625rem;
+    width: 36rem;
   }
   .scrollBackButton {
     bottom: 1rem;
@@ -704,6 +673,9 @@ body {
 @media (max-width: 690px) {
   html {
     font-size: 81.25%;
+  }
+  .main-content {
+    width: 42rem;
   }
   .scrollBackButton {
     bottom: 1rem;
@@ -724,13 +696,15 @@ body {
   html {
     font-size: 81.25%;
   }
+
   /* MAIN */
   .main-content {
-    margin: auto 3rem;
+    margin: auto 2.5rem;
   }
   .main-content__title {
     margin: 18rem auto 20rem auto;
-    width: 30rem;
+    width: 29.5rem;
+    font-size: 2.75rem;
   }
   .section-title__underline {
     width: 28rem;
@@ -743,8 +717,9 @@ body {
   }
   /* PROJECTS SECTION */
   .projects {
-    width: 34rem;
+    width: 28rem;
     margin-top: 3rem;
+    margin-left: 4.5rem;
   }
   .projects__block {
     flex-direction: column;
@@ -767,11 +742,12 @@ body {
     margin-bottom: 8rem;
   }
   .contact {
-    width: 33rem;
-    margin-left: 1rem;
+    width: 28.5rem;
+    margin-left: 4rem;
   }
   .contact__paragraph {
     margin-bottom: 6.25rem;
+    width: 28rem;
   }
   .contact__icons {
     justify-content: space-around;
@@ -797,6 +773,11 @@ body {
     color: transparent;
   }
 }
+@media (max-width: 470px) {
+  .projects {
+    margin-left: 1.5rem;
+  }
+}
 /* --MOBILE-- */
 
 @media (max-width: 400px) {
@@ -820,7 +801,7 @@ body {
     margin: auto 2rem;
   }
   .main-content__title {
-    font-size: 3rem;
+    font-size: 2.75rem;
     margin: 20rem auto 30rem auto;
     width: 28rem;
   }
@@ -847,6 +828,7 @@ body {
   .projects {
     width: 28rem;
     margin-top: 2rem;
+    margin-left: 0;
   }
   .projects__block {
     flex-direction: column;
@@ -870,10 +852,11 @@ body {
   }
   .contact {
     margin-top: 2rem;
-    width: 26rem;
+    width: 27rem;
   }
   .contact__paragraph {
     margin-bottom: 6.25rem;
+    width: 26rem;
   }
   .contact__icons {
     justify-content: space-around;

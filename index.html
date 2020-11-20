@@ -11,13 +11,15 @@
 </head>
 <body>
   <header>
-    <nav class="nav__flex-container">
-     <li class="nav__item"><a class="nav__button" href="#profile">Profile</a></li>
-      <li class="nav__item"><a class="nav__button" href="#projects">Projects</a></li>
-      <li class="nav__item"><a class="nav__button" href="#contact">Contact</a></li>
+    <nav>
+      <ul class="nav__flex-container">
+         <li class="nav__item"><a class="nav__button" href="#profile" aria-label="Profile">Profile</a></li>
+         <li class="nav__item"><a class="nav__button" href="#projects" aria-label="Projects">Projects</a></li>
+         <li class="nav__item"><a class="nav__button" href="#contact" aria-label="Contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
-  <main class="main-content">
+  <main id="main-content" class="main-content">
       <h1 class="main-content__title">Hi!<br />
       My name is Katia.<br />
       I am a Front-End Developer<br /> based in Porto, Portugal.</h1>
@@ -68,8 +70,8 @@
                 <p class="projects__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu
                   salutandi definitionem. </p>
                 <div class="projects__buttons-container">
-                  <button class="projects__item"><a href="#" class="projects__button">Demo</a></button>
-                  <button class="projects__item"><a href="#" class="projects__button">GitHub</a></button>
+                  <button class="projects__item" aria-label="Demo"><a href="#" class="projects__button">Demo</a></button>
+                  <button class="projects__item" aria-label="GitHub"><a href="#" class="projects__button projects__button--shorter">GitHub</a></button>
                 </div>
               </div>
           </article>
@@ -79,8 +81,8 @@
                 <h3 class="projects__title">Ravenous</h3>
                 <p class="projects__paragraph" >Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu salutandi definitionem. </p>
                 <div class="projects__buttons-container">
-                  <button class="projects__item"><a href="#" class="projects__button">Demo</a></button>
-                  <button class="projects__item"><a href="#" class="projects__button">GitHub</a></button>
+                  <button class="projects__item" aria-label="Demo"><a href="#" class="projects__button">Demo</a></button>
+                  <button class="projects__item" aria-label="GitHub"><a href="#" class="projects__button projects__button--shorter">GitHub</a></button>
                 </div>
               </div>
           </article>
@@ -91,8 +93,8 @@
             <p class="projects__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu
               salutandi definitionem. </p>
             <div class="projects__buttons-container">
-              <button class="projects__item"><a href="#" class="projects__button">Demo</a></button>
-              <button class="projects__item"><a href="#" class="projects__button">GitHub</a></button>
+              <button class="projects__item" aria-label="Demo"><a href="#" class="projects__button">Demo</a></button>
+              <button class="projects__item" aria-label="GitHub"><a href="#" class="projects__button projects__button--shorter">GitHub</a></button>
             </div>
           </div>
           </article>
@@ -103,8 +105,8 @@
             <p class="projects__paragraph">Lorem ipsum dolor sit amet, his nemore vivendum te, enim fuisset his at, eos eu
               salutandi definitionem. </p>
               <div class="projects__buttons-container">
-                <button class="projects__item"><a href="#" class="projects__button">Demo</a></button>
-                <button class="projects__item"><a href="#" class="projects__button">GitHub</a></button>
+                <button class="projects__item" aria-label="Demo"><a href="#" class="projects__button">Demo</a></button>
+                <button class="projects__item" aria-label="GitHub"><a href="#" class="projects__button projects__button--shorter">GitHub</a></button>
               </div>
           </div>
             </article>
@@ -119,18 +121,20 @@
         <p class="contact__paragraph">In mea vero probatus inciderint, patrioque disputationi in eum. Ei pri zril fuisset. Te quo legere sententiae
         theophrastus, eam an movet tincidunt.</p>
         <ul class="contact__icons">
-          <li class="contact__item"><a class="contact__link" href="#"><img class="contact__image" src="./resources/Email.png" alt="Email icon"></a></li>
-          <li class="contact__item"><a class="contact__link" href="#"><img class="contact__image" src="./resources/GitHub.png" alt="GitHub icon"></a></li>
-          <li class="contact__item"><a class="contact__link" href="#"><img class="contact__image" src="./resources/LinkedIn.png" alt="LinkedIn icon"></a></li>
+          <li class="contact__item" aria-label="Email"><a class="contact__link" href="#"><img class="contact__image" src="./resources/Email.png" alt="Email icon"></a></li>
+          <li class="contact__item" aria-label="GitHub"><a class="contact__link" href="#"><img class="contact__image" src="./resources/GitHub.png" alt="GitHub icon"></a></li>
+          <li class="contact__item" aria-label="LinkedIn"><a class="contact__link" href="#"><img class="contact__image" src="./resources/LinkedIn.png" alt="LinkedIn icon"></a></li>
         </ul>
       </div>
     </section>
-    <button class="scrollBackButton">
-      <a class="scrollBackButton__link" href="#"><img class="scrollBackButton__image" src="./resources/Arrow.png"></a>
+    <button class="scrollBackButton" id="scrollBackButton">
+      <a class="scrollBackButton__link" href="#" aria-label="Back-to-top button"><img class="scrollBackButton__image" src="./resources/Arrow.png" alt="Back-to-top button"></a>
     </button>
   </main>
   <footer class="footer">
   Developed by Katia Zakharkevich
   </footer>
+  <script src="js/script.js">
+  </script>
 </body>
 </html>

@@ -226,6 +226,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .projects__title {
   font-size: 2rem;
@@ -239,7 +240,8 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 1.875rem;
+  /*margin-top: 1.875rem;*/
+  margin-top: 0;
 }
 /* FROM HERE !!!!!*/
 .projects__button {

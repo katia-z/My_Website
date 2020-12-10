@@ -131,7 +131,22 @@ button {
   font-size: 1.5rem;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
 }
-
+.profile__link {
+  color: rgb(218, 216, 216);
+  text-decoration-color: rgba(226, 108, 0, 1);
+}
+.profile__link:hover {
+  color: rgba(226, 108, 0, 1);
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+}
+.profile__link--orange {
+  color: rgba(226, 108, 0, 1);
+  text-decoration: none;
+}
+.profile__link--orange:hover {
+  color: rgba(226, 0, 122, 1);
+}
 .profile__title {
   margin-bottom: 3.75rem;
   font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
@@ -257,27 +272,13 @@ button {
   color: rgb(218, 216, 216);
   text-decoration: none;
 }
-/* TILL HERE !!!!!*/
-
-/*.projects__item {
-  display: inline-block;
-  border: none;
-  text-decoration: none;
-  background: transparent;
-}
-.projects__button {
-  background-color: rgba(24, 24, 24, 1);
-  color: rgb(218, 216, 216);
-  border: 1px solid rgba(226, 108, 0, 1);
-  border-radius: 1.563rem;
-  font-size: 1.5rem;
-  padding: 0.25rem 1.875rem;
-  outline: none;
-  text-decoration: none;
-}*/
 .projects__button--shorter {
   padding: 0.25rem 1.58rem;
   margin-left: 1.25rem;
+}
+/*below - temporary */
+.projects__button--nomargin {
+  margin-left: 0;
 }
 .projects__link:hover {
   color: rgba(226, 108, 0, 1);
@@ -362,8 +363,16 @@ button {
   .nav__button:hover {
     color: rgba(226, 0, 122, 1);
   }
+  .profile__link:hover {
+    color: rgb(218, 216, 216);
+    text-decoration-line: underline;
+    text-decoration-color: rgba(226, 108, 0, 1);
+  }
+  .profile__link--orange:hover {
+    color: rgba(226, 108, 0, 1);
+  }
   .projects__link:hover {
-    color: white;
+    color: rgb(218, 216, 216);
   }
   .contact__image:hover {
     transform: scale(1);
@@ -547,9 +556,9 @@ button {
     font-size: 1.557rem;
     margin: 1.112rem auto;
   }
-  .projects__buttons-container {
+  /* .projects__buttons-container {
     margin-top: 2.08rem;
-  }
+  }*/
   .projects__button {
     border-radius: 1.95rem;
     font-size: 1.738rem;
@@ -680,12 +689,12 @@ button {
     font-size: 2rem;
   }
   .projects__paragraph {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 1rem auto;
   }
-  .projects__buttons-container {
+  /*.projects__buttons-container {
     margin-top: 1.875rem;
-  }
+  }*/
   .projects__button {
     border-radius: 1.563rem;
     font-size: 1.5rem;

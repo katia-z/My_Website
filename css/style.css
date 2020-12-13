@@ -235,6 +235,8 @@ button {
   height: 15rem;
   width: 17.5rem;
   margin-top: 2rem;
+  border: 1px solid rgba(226, 108, 0, 1);
+  border-radius: 0.3rem;
 }
 .projects__description {
   margin-left: 1.875rem;
